@@ -11,7 +11,7 @@ Required packages:
 + gem install iconv
 + gem install pdfbeads
 + sudo apt install pdftk-java
-+ sudo apt install djvulib
++ sudo apt install djvulibre-bin
 + sudo apt install djvu2hocr
 
 To run the script, create a python virtual env and install requirements.txt:
