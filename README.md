@@ -1,3 +1,30 @@
+# dpsprep
+
+A tool to convert djvu files to pdf, keeping OCR text and bookmarks
+
+## How To Run
+
+Required packages:
+
++ Install ruby (this is for Ubuntu 19.1, find one for your OS): https://gorails.com/setup/ubuntu/19.10#ruby-rbenv
++ sudo apt install libmagickwand-dev
++ gem install iconv
++ gem install pdfbeads
++ sudo apt install pdftk-java
++ sudo apt install djvulib
++ sudo apt install djvu2hocr
+
+To run the script, create a python virtual env and install requirements.txt:
+
++ sudo apt install python2-minimal
++ virtualenv -p /usr/bin/python2.7 venv
++ source ./venv/bin/activate
++ pip install -r requirements.txt
++ python dpsprep.py SOURCE_FILE_PATH DEST_FILE_NAME  
+(e.g. python dpsprep.py tmp/Suomen_Mestari_3.djvu Suomen_Mestari_3.pdf) 
+
+## OLD ORIGINAL README FROM https://github.com/kcroker/dpsprep
+
 dpsprep
 ----------------------------------------------------------
 

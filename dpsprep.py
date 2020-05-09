@@ -1,8 +1,3 @@
-#!/usr/bin/env python2
-# dpsprep - Sony Digital Paper DJVU to PDF converter
-# Copyright(c) 2015 Kevin Croker
-# GNU GPL v3
-#
 import sexpdata
 import argparse
 import os
@@ -50,7 +45,7 @@ tmp = home + "/.dpsprep"
 # and we don't otherwise work directly with the DJVU and PDF files.
 # Also, stash the temp pdf in the clean spot
 args.src = pipes.quote(args.src)
-finaldest = pipes.quote(args.dest)
+finaldest = os.path.dirname(args.src) + "/" + pipes.quote(args.dest)
 args.dest = home + '/.dpsprep/' + pipes.quote(args.dest)
     
 # Check for a file presently being processed
