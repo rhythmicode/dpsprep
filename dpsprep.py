@@ -44,8 +44,9 @@ tmp = home + "/.dpsprep"
 # Reescape the filenames because we will just be sending them to commands via system 
 # and we don't otherwise work directly with the DJVU and PDF files.
 # Also, stash the temp pdf in the clean spot
+args_src_dir = os.path.dirname(args.src)
 args.src = pipes.quote(args.src)
-finaldest = os.path.dirname(args.src) + "/" + pipes.quote(args.dest)
+finaldest = pipes.quote(args_src_dir + "/" + args.dest)
 args.dest = home + '/.dpsprep/' + pipes.quote(args.dest)
     
 # Check for a file presently being processed
